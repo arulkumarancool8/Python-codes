@@ -1,0 +1,18 @@
+a=int(input())
+ans=0
+l=[2]
+for i in range(3,a+1):
+    for j in range(2,i):
+        if(i%j==0):
+            break
+    else:
+        s=0
+        for k in l:
+            s+=k
+            if(s>i):
+                break
+            if(s==i):
+                ans+=1
+                break
+        l.append(i)
+print(ans)

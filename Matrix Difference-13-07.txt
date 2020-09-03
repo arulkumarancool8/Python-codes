@@ -1,0 +1,14 @@
+a=int(input())
+l=[]
+le=0
+ri=0
+for i in range(a):
+    b=list(map(int,input().split()))
+    l.append(b)
+for i in range(a):
+    for j in range(a):
+        if(i==j):
+            le+=l[i][j]
+        if(i+j==a-1):
+            ri+=l[i][j]
+print(abs(le-ri))
