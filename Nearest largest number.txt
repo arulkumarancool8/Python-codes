@@ -1,0 +1,14 @@
+from itertools import permutations
+a,b=input().split()
+p=permutations(list(a))
+l=[]
+for i in p:
+    j=int("".join(i))
+    l.append(j)
+l.sort()
+for i in l:
+    if(i>int(b)):
+        print(i)
+        break
+else:
+    print(-1)
